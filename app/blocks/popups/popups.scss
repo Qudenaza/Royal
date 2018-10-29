@@ -1,0 +1,19 @@
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css';
+
+.popups {
+  display: none;
+}
+
+.popup {
+  &_active {
+    display: block !important;
+  }
+
+  &_disabled {
+    display: none;
+  }
+}
+
+.fancybox-close-small:focus::after { outline: none; }
+
+.fancybox-enabled { overflow: initial; }

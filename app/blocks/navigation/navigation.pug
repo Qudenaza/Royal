@@ -1,0 +1,34 @@
+mixin navigation()
+  +b.NAV.navigation&attributes(attributes)._closed._no-js
+    +e.A.image(href="index.html")
+      +e.PICTURE.logo
+       source(media="(min-width: 1400px)" srcset="assets/images/logo-desktop.jpg" width="191" height="85")
+       img(src="assets/images/logo-mobile.jpg" alt="Логотип сайта")
+    +button('button').navigation__toggle
+      SPAN.navigation__burger
+    +e.UL.list
+      +e.LI.item
+        +link().navigation__link.navigation__link_isActive Мой профиль
+      +e.LI.item
+        +link.navigation__link Анкеты
+      +e.LI.item
+        +link.navigation__link Помёты
+      +e.LI.item
+        +link.navigation__link Каталог призов
+      +e.LI.item
+        +link.navigation__link Заказы
+      +e.LI.item
+        +link.navigation__link Мои баллы
+      +e.LI.item
+        +link.navigation__link Корзина
+        +e.SPAN.count 2
+      +e.LI.item.navigation__item_instruction.navigation__item_uppercase
+        +link-icon('instruction').navigation__link Скачать инструкцию
+      +e.LI.item.navigation__item_instruction
+        +link.navigation__link По бесплатному выкорму
+      +e.LI.item.navigation__item_instruction
+        +link.navigation__link По работе с Личным Кабинетом
+      +e.LI.item.navigation__item_number
+        +link(tel="88002003735").navigation__link 8-800-200-37-35
+      +e.LI.item.navigation__item_email
+        +link.navigation__link support.royalcanin@russiadirect.ru

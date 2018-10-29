@@ -1,0 +1,310 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+
+  &__contacts {
+    display: none;
+
+    @include screen('desktop-wide') {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+  }
+
+  &__popup {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    width: 341px;
+    height: 108px;
+    top: 54px;
+    left: -35px;
+    justify-content: space-between;
+    padding: 20px 10px 20px 33px;
+    box-sizing: border-box;
+    background: #f6f6f6;
+    border: 1px solid $color-link-border;
+    border-radius: 5px;
+    z-index: 21;
+    animation: fade-in .3s ease;
+
+    &::before {
+      @include pseudo;
+      width: 15px;
+      height: 15px;
+      top: -9px;
+      background: inherit;
+      border-top: 1px solid $color-link-border;
+      border-left: 1px solid $color-link-border;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 1px; // Для PP
+
+    @include screen('desktop-wide') {
+      width: 45%;
+    }
+  }
+
+  &__download {
+    text-transform: uppercase;
+    @include heading-10;
+
+    & .link__text {
+      letter-spacing: 0.4px;
+      color: $color-white;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    & svg {
+      @include screen('desktop-wide') {
+        top: 6px;
+      }
+    }
+  }
+
+  &__phone {
+    margin-left: 27px;
+    @include heading-10;
+
+    @include screen('desktop-wide') {
+      margin-left: 28px;
+    }
+
+    & .link__text {
+      letter-spacing: -0.3px;
+      color: $color-white;
+
+      @include screen('desktop-wide') {
+        letter-spacing: 0.4px;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__mail {
+    margin-left: 25px;
+    @include heading-9;
+    line-height: 2;
+
+    & .link__text {
+      color: $color-white;
+      letter-spacing: -0.1px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__bell {
+    position: relative;
+
+    @include screen('tablet') {
+      margin-top: -3px;
+    }
+
+    @include screen('desktop-wide') {
+      margin-right: 2%;
+      margin: 0 2% 0 35.6%;
+    }
+
+    & svg {
+      max-width: 15px;
+      max-height: 15px;
+    }
+  }
+
+  &__notifications {
+    position: absolute;
+    bottom: 19px;
+    left: 17px;
+    color: $color-white;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    z-index: 10;
+
+    @include screen('desktop-wide') {
+      bottom: 21px;
+      left: 19px;
+    }
+
+    &::before {
+      @include pseudo;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 16px;
+      background: $color-main;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  &__login {
+    margin-right: 17%; // Отступ !
+    margin-top: -6px;
+    @include heading-9;
+    @include screen('tablet') {
+      margin: 0 0 0 56.5%;
+    }
+
+    @include screen('tablet') {
+      margin-top: -7px;
+    }
+
+    @include screen('desktop-wide') {
+      margin: 0;
+    }
+
+    & svg {
+      max-width: 16px;
+      max-height: 16px;
+      top: 3px;
+      left: 1px;
+    }
+
+    & .link__text {
+      color: $color-white;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__exit {
+    display: flex;
+    margin-top: -4px;
+
+    @include screen('desktop-wide') {
+      align-items: center;
+    }
+
+    & svg {
+      max-width: 16px;
+      max-height: 16px;
+
+      @include screen('tablet') {
+        margin-top: 6px;
+      }
+
+      @include screen('desktop-wide') {
+        margin-top: 2px;
+      }
+    }
+
+    & b {
+      display: none;
+
+      @include screen('tablet') {
+        display: inline-block;
+        margin-left: 10px;
+        text-transform: uppercase;
+        @include heading-8;
+      }
+    }
+  }
+
+  & svg {
+    fill: $color-white;
+  }
+}
+
+
+.notification__popup {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 112%;
+  height: 230px;
+  z-index: 23;
+  left: -17px;
+  top: 38px;
+  box-sizing: border-box;
+  background: #f6f6f6;
+  border: 1px solid $color-link-border;
+
+  @include screen('tablet') {
+    width: 340px;
+  }
+
+  @include screen ('desktop-wide') {
+    height: 290px;
+    top: 54px;
+    right: 70px;
+    left: auto;
+  }
+
+  &::before {
+    @include pseudo;
+    width: 16px;
+    height: 16px;
+    left: 15px;
+    top: -10px;
+    background: inherit;
+    border-left: 1px solid $color-link-border;
+    border-top: 1px solid $color-link-border;
+    transform: rotate(45deg);
+
+    @include screen('desktop-wide') {
+      left: 48px;
+    }
+  }
+}
+
+.notification__box {
+  padding: 10px 52px 10px 32px;
+  border-bottom: 1px solid $color-link-border;
+}
+
+.notification__message {
+  margin-bottom: 10px;
+  color: $color-grey;
+  font-size: 16px;
+  font-weight: 300;
+
+  & b {
+    font-weight: 700;
+  }
+}
+
+.notification__time {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+  color: $color-grey-tertiary;
+}
+
+.notification__btn {
+  @include button;
+  width: 130px;
+  margin: 0 auto;
+  margin-top: 8px;
+  text-align: center;
+  color: $color-grey-secondary;
+  border-bottom: 1px solid #d7d7d7;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

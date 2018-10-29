@@ -1,0 +1,25 @@
+mixin user()
+  +b.SECTION.user&attributes(attributes)
+    +e.contacts
+      +link-icon('instruction').user__download Скачать инструкцию
+      +e.DIV.popup.popup
+        +link() По бесплатному выкорму
+        +link() По работе с Личным Кабинетом
+      +link()(tel="88002003735").user__phone 8-800-200-37-35
+      +link().user__mail support.royalcanin@russiadirect.ru
+    +e.block
+      +button('button').user__bell
+        +icon('bell')
+        SPAN.user__notifications 2
+      DIV.notification__popup.popup
+        DIV.notification__box
+          P.notification__message Ваша заявка на бесплатное кормление (Алабай, дата рождения 03.03.2019) <b>отклонена</b>. За уточнениями обратитесь к вашему менеджеру.
+          TIME.notification__time 15 минут назад
+        DIV.notification__box
+          P.notification__message Вам начислено <b>1000 баллов</b> по акции «Приведи друга».
+          TIME.notification__time 2 месяца назад
+        BUTTON.notification__btn Очистить список
+      +link-icon('user').user__login Екатерина Иванова
+      +button().user__exit
+        +icon('exit')
+        B выйти

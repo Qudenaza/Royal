@@ -1,0 +1,23 @@
+mixin user-data()
+  +b.SECTION.user-data.profile__content&attributes(attributes)
+    +e.content
+      +e.H2.points 7400
+      +e.SPAN.caption Баллов
+      +link().user-data__link Как получить больше баллов?
+    +e.content._row
+      +button()._red.user-data__btn Использовать баллы
+      +link().user-data__link Мои заказы
+    +e.info
+      +e.H3.title Мой профиль:
+      +e.wrapper
+        +e.H4.subtitle ФИО
+        +e.P.text Иванов Иван Иванович
+      +e.wrapper
+        +e.H4.subtitle Логин
+        +e.P.text Def1_23
+      +e.wrapper
+        +e.H4.subtitle E-mail
+        +e.P.text Ivanovl@yandex.ru
+      +e.wrapper
+        +e.H4.subtitle Номер телефона
+        +e.P.text +7 (903) 350-3151

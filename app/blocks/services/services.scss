@@ -1,0 +1,176 @@
+.services {
+  position: relative;
+  text-align: center;
+
+  @include screen('tablet') {
+    padding-bottom: 31px;
+    margin-bottom: 0 !important;
+  }
+
+  @include screen('desktop-wide') {
+    width: 400px;
+    border-left: none !important;
+    padding-top: 22px !important;
+  }
+
+  &::after {
+    @include pseudo;
+    width: 100%;
+    height: 1px;
+    bottom: 45%;
+    left: 0;
+    background: $color-border;
+
+    @include screen('tablet') {
+      bottom: 48.5%;
+    }
+
+    @include screen('desktop-wide') {
+      bottom: 58.9%;
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    display: none;
+    width: 288px;
+    right: 0;
+    top: -267px;
+    padding: 11px 20px 14px 30px;
+    border: 1px solid $color-link-border;
+    background: #f6f6f6;
+    color: $color-grey-tertiary;
+    @include heading-4;
+    box-sizing: border-box;
+    text-align: left;
+    animation: fade-in 0.5s ease;
+
+    @include screen('tablet') {
+      top: -195px;
+      width: 460px;
+    }
+
+    @include screen('desktop-wide') {
+      top: -28%;
+      right: -5%;
+      width: 461px;
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &::after {
+      @include pseudo;
+      width: 13px;
+      height: 13px;
+      border-bottom: 1px solid $color-link-border;
+      border-right: 1px solid $color-link-border;
+      background: #f6f6f6;
+      transform: rotate(45deg);
+      bottom: -9px;
+      right: 16px;
+
+      @include screen('desktop-wide') {
+        right: 38px;
+      }
+    }
+  }
+
+  &__pets {
+    margin-bottom: 51px;
+
+    @include screen('tablet') {
+      margin-bottom: 54px;
+    }
+
+    @include screen('desktop-wide') {
+      margin-bottom: 57px;
+    }
+  }
+
+  &__services {
+    @include screen('tablet') {
+      margin-bottom: -9px; // Для PP
+    }
+  }
+
+  &__picture {
+    display: block;
+    margin-bottom: 22px;
+    margin-left: -4px; // Для PP
+    text-align: center;
+
+    @include screen('tablet') {
+      margin: 3px 0 19px 0;
+    }
+
+    @include screen('desktop-wide') {
+      margin-top: 1px; // Для PP
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    @include text;
+    text-align: left;
+    color: $color-grey-tertiary;
+  }
+
+  &__btn {
+    padding: 9px 25px 13px 27px;
+    letter-spacing: 0.2px;
+
+    &_padding {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include screen('tablet') {
+      margin: 29px 0 0 0;
+    }
+
+    @include screen('desktop-wide') {
+      margin-top: 6px;
+    }
+  }
+
+  &__question {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    top: -50px;
+    right: 21px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:hover + .services__popup {
+      display: block;
+    }
+
+    &:hover svg {
+      fill: $color-main;
+    }
+
+    & svg {
+      width: 140%;
+      fill: #767676;
+    }
+
+    @include screen('desktop-wide') {
+      right: 24px;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

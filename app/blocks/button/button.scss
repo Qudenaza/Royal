@@ -1,0 +1,33 @@
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: $color-white;
+  background-color: transparent;
+  transition: opacity $ease-main;
+  cursor: pointer;
+  @include button;
+
+  &_red {
+    padding: 12px 27px 14px 27px;
+    background: $color-main;
+  }
+
+  &_white {
+    padding: 11px 30px;
+    color: $color-main;
+    border: 2px solid $color-main;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover,
+  &.is-active {
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,84 @@
+.cattery {
+  @include screen('tablet') {
+    padding-top: 32px !important;
+  }
+
+  @include screen('desktop-wide') {
+    width: 442px;
+    padding-top: 34px !important;
+  }
+
+  &__title {
+    @include heading-2;
+    margin-bottom: 24px;
+    color: $color-grey;
+
+    @include screen('tablet') {
+      margin-bottom: 28px;
+      @include heading-1;
+    }
+  }
+
+  &__content {
+    margin-bottom: 26px;
+
+    @include screen('tablet') {
+      margin-bottom: 29px;
+      @include heading-1;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 3px;
+    margin-left: -1px;
+    letter-spacing: 0.2px;
+    color: $color-grey-secondary;
+    @include heading-3;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include screen('tablet') {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include screen('desktop-wide') {
+      justify-content: flex-start;
+    }
+  }
+
+  &__btn {
+    margin: -4px 0 0 0;
+    padding: 11px 29px 15px 32px;
+    letter-spacing: 0.2px;
+
+    @include screen('tablet') {
+      margin: 0 22px 0 0;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @include screen('desktop-wide') {
+      padding-right: 28px;
+      padding-left: 32px;
+    }
+  }
+
+  &__link {
+    margin: 16px 0 0 0;
+    @include screen('tablet') {
+      margin: -4px 0 0 0;
+    }
+  }
+
+  & li,
+  & p,
+  & b {
+    color: $color-grey-tertiary;
+    @include heading-4;
+  }
+}

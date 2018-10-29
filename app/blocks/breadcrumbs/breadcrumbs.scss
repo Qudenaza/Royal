@@ -1,0 +1,47 @@
+$breadpadding: 18px;
+
+.breadcrumbs {
+  display: block;
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    &:not(:last-child) {
+      padding-right: $breadpadding;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        bottom: 0;
+        margin: auto;
+        right: $breadpadding/2;
+        width: 5px;
+        height: 5px;
+        border-width: 1px 1px 0 0;
+        border-style: solid;
+        border-color: #767676;
+        opacity: 0.3;
+        transform-origin: center;
+        transform: translateX(50%) rotate(45deg);
+      }
+    }
+
+    & .link__text {
+      @include text;
+      color: $color-grey-tertiary;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:last-child .link {
+      pointer-events: none;
+
+      &__text {
+        color: $color-main;
+      }
+    }
+  }
+}

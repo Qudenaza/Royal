@@ -1,0 +1,42 @@
+@import '../../node_modules/normalize.css/normalize.css';
+@import 'helpers/variables'; // Переменные
+@import 'helpers/mixins'; // Миксины
+@import 'helpers/fonts'; // Шрифты
+@import 'helpers/gradients'; // Градиенты
+@import 'helpers/basics'; // Основные общие стили
+@import 'helpers/text-styles'; // Стили текстов
+@import 'helpers/link-styles'; // Стили ссылок
+@import 'helpers/list-styles'; // Стили списков
+@import '../blocks/**/*';
+@import '../components/**/*';
+@import '../pages/**/*';
+
+.container {
+  min-width: $container-width;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  @include screen('tablet') {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include screen('desktop-wide') {
+    width: 1400px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  &_main {
+    @include screen('desktop-wide') {
+      flex-direction: column;
+    }
+  }
+}
+
+.js-sr {
+  visibility: hidden;
+}

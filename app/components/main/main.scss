@@ -1,0 +1,12 @@
+.main {
+  display: block;
+  padding-top: 7px;
+
+  @include screen('tablet') {
+    padding-top: 16px;
+  }
+
+  @include screen('desktop-wide') {
+    padding-top: 19px;
+  }
+}

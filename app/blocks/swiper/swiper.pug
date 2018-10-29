@@ -1,0 +1,18 @@
+mixin swiper()
+  +b.SECTION.swiper&attributes(attributes)
+    +e.controls
+      button.swiper__to-left
+        +icon('left')
+      +e.test 1/10
+      button.swiper__to-right
+        +icon('right')
+    +e.alert-box
+      +e.alert
+        +e.P.text Ваша заявка <b>№ 12384721</b> на бесплатный выкорм отклонена, обратитесь к вашему менеджеру
+    +e.dots
+        button.swiper__dot
+        button.swiper__dot.swiper__dot_active
+        button.swiper__dot
+        button.swiper__dot
+        button.swiper__dot
+        button.swiper__dot

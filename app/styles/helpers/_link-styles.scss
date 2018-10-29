@@ -1,0 +1,38 @@
+@mixin link {
+  @include link-text;
+  color: $color-grey-secondary;
+  border: 0;
+  transition: fill $ease-main, color $ease-main, opacity $ease-main,
+    border-color $ease-main;
+  fill: $color-main;
+
+  &__text {
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $color-link-border;
+
+      @include screen('tablet') {
+        bottom: -4px;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@mixin link-disabled {
+  color: $color-border;
+  border-color: transparent;
+}
+
+@mixin link-dashed {
+  border-bottom-style: dashed;
+}

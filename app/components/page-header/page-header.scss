@@ -1,0 +1,28 @@
+.page-header {
+  &__top {
+    padding: 18px 0 16px 0;
+    background: $color-grey;
+
+    @include screen('tablet') {
+      padding-bottom: 13px;
+    }
+
+    @include screen('desktop-wide') {
+      padding: 26px 0 26px 0;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    padding-bottom: 5px;
+    background: $color-main;
+
+    @include screen('desktop-wide') {
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    margin-left: -16px;
+  }
+}

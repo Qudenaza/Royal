@@ -1,0 +1,20 @@
+mixin services()
+  +b.SECTION.services.profile__content&attributes(attributes)
+    +button('button').services__question
+      +icon('question')
+    DIV.services__popup.popup
+      p Все ваши объявления будут выводиться в результатах поиска совершенно бесплатно. Вам будет доступна статистика просмотров ваших объявлений.
+      p Редактировать и добавлять карточки животных вы легко сможете как с компьютера, так и с мобильного телефона.
+    +e.pets
+      +e.PICTURE.picture
+          source(media="(min-width: 768px)" srcset="assets/images/pets-tablet.png" width="226" height="48")
+          img(src="assets/images/pets.png" alt="Питомцы")
+      +e.P.text Присоединяйтесь к нашему новому сервису Best of pets для продажи щенков и котят. Новый сервис связан с Royal Breeder Club, и вы сможете опубликовать объявление в один клик.
+      +button()._white.services__btn Перейти в Best of Pets
+    +e.college
+      +e.PICTURE.picture
+          source(media="(min-width: 768px)" srcset="assets/images/college-tablet.png" width="246" height="56")
+          img(src="assets/images/college.png" alt="Колледж")
+      +e.P.text Онлайн-лекции и самые актуальные темы для заводчиков, лучшие книги, статьи, вебинары.
+      +button()._white.services__btn.services__btn_padding Мои вебинары
+

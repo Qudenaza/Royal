@@ -1,0 +1,26 @@
+mixin cattery()
+  +b.SECTION.cattery.profile__content()&attributes(attributes)
+    +e.H2.title Мой питомник:
+    +e.content
+      +e.H3.subtitle Питомник:
+      p Питомник собак и кошек
+    +e.content
+      +e.H3.subtitle Количество взрослых животных:
+      ul
+        li Собак:
+          b 4
+        li Кошек:
+          b 5
+    +e.content
+      +e.H3.subtitle Мои породы
+      +ul-list()
+        li Австралийская короткохвостая пастушья собака
+        li Австралийский мист
+        li Бернский зенненхунд
+        li Французcкая болонка
+        li Бордер-колли
+        li Британская короткошерстная кошка
+        li Бурмилла
+    +e.controls
+      +button()._red.cattery__btn Добавить помёт
+      +link().cattery__link Мои помёты
